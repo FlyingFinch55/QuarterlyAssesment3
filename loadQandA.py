@@ -2,13 +2,22 @@ from tkinter import *
 from tkinter import ttk
 
 root = Tk()
-root.title("Quiz Bowl Topic Selection")
+root.title("Quiz Bowl")
 
 
 class TopicSelection:
-    def __init__(self,master):
-        self.lab1 = ttk.Label(master)
-        self.lab1.grid()
+    def __init__(self,master, topicOptions):
+        self.labIntro = ttk.Label(master, text="Welcome to the Quiz bowl")
+        self.labIntro.grid()
+        self.labPick = ttk.Label(master, text="Pick a topic for your quiz")
+        self.labPick.grid()
+
+        self.topicPick = ttk.Combobox(master)
+        self.topicPick.config(value= topicOptions)
+        self.topicPick.grid()
+
+        self.submitButt = ttk.Button(master, text="Submit")
+        self.submitButt.grid()
 
 
 class QandA:
@@ -39,8 +48,7 @@ class QandA:
             self.feedLable.config(text="Incorrect", foreground="red")
         
 
-
-
-
+ListOptions = ["Python code", "Accounting basics", "Assebly code", "Computer Hardwear"]
+startTopic = TopicSelection(root,ListOptions)
 
 root.mainloop()
