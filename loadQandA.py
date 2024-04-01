@@ -48,7 +48,7 @@ class QandA:
             self.feedLable.config(text="Incorrect", foreground="red")
         
 
-ListOptions = ["Python code", "Accounting basics", "Assebly code", "Computer Hardwear"]
+ListOptions = ["Python code", "Accounting basics", "Assebly code", "Computer Hardwear", "Database"]
 startTopic = TopicSelection(root,ListOptions)
 
 root.mainloop()
