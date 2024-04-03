@@ -18,14 +18,14 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
-#curse.execute('''INSERT INTO ACCT VALUES
-#              ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
-#              ''')
+curse.execute('''INSERT INTO ACCT VALUES
+              ('What is the Net Income equation?', 'Owners Equity + Net Sales','Revenue - Expenses','Revenue + Expenses', 'Liabilty + Equity','Revenue - Expense')
+              ''')
 conn.commit()
 
 #1 ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
-
-
+#2 ('What is the Net Income equation?', 'Owners Equity + Net Sales','Revenue - Expenses','Revenue + Expenses', 'Liabilty + Equity','Revenue - Expense')
+#3
 
 
 #Table 2 labled Databaase
