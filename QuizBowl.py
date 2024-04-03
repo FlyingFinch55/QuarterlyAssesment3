@@ -18,7 +18,12 @@ class TopicSelection:
         self.topicPick.grid()
 
         self.submitButt = ttk.Button(master, text="Submit")
+        self.submitButt.config(command= self.RunQuiz())
         self.submitButt.grid()
+    def RunQuiz(self,Table):
+        for question in Table:
+            quizbowler = QandA(question, answeroptions,correctAnswer)
+
 
 
 class QandA:
