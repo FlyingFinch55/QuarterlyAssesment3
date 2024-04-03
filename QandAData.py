@@ -14,7 +14,7 @@ curse = conn.cursor()
 
 #Table 1 labled ACCT
 curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
-              (question TEXT, answerOptions TEXT, correctAnswer TEXT)''')
+              (question TEXT, answerOptions LIST, correctAnswer TEXT)''')
 
 AnswerList = ['Assets','Accounts Recivale', 'Owners Equity', 'Assistant']
 AnserOpt = str(AnswerList)
@@ -23,3 +23,34 @@ curse.execute('''INSERT INTO ACCT VALUES
               ''')
 conn.commit()
 
+
+
+
+#Table 2 labled Databaase
+curse.execute('''CREATE TABLE IF NOT EXISTS Database
+              (question TEXT, answerOptions LIST, correctAnswer TEXT)''')
+
+
+
+
+
+#Table 3 labled Assably Prog
+curse.execute('''CREATE TABLE IF NOT EXISTS AssablyProg
+              (question TEXT, answerOptions LIST, correctAnswer TEXT)''')
+
+
+
+
+
+#Table 4 labeled PythonProg
+curse.execute('''CREATE TABLE IF NOT EXISTS PythonProg
+              (question TEXT, answerOptions LIST, correctAnswer TEXT)''')
+
+
+
+
+
+
+#Table 5 labled ComputerHardWear
+curse.execute('''CREATE TABLE IF NOT EXISTS ComputerHardWear
+              (question TEXT, answerOptions LIST, correctAnswer TEXT)''')
