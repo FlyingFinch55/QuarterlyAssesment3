@@ -19,13 +19,15 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
 
 
 curse.execute('''INSERT INTO ACCT VALUES
-              ('What is the Net Income equation?', 'Owners Equity + Net Sales','Revenue - Expenses','Revenue + Expenses', 'Liabilty + Equity','Revenue - Expense')
+              ('True or False, Inventory Turnover measures how fast merchandise is sold.','True','False','','', 'True')
               ''')
 conn.commit()
 
 #1 ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
 #2 ('What is the Net Income equation?', 'Owners Equity + Net Sales','Revenue - Expenses','Revenue + Expenses', 'Liabilty + Equity','Revenue - Expense')
-#3
+#3 ('Does Gross Profit = Revenue - Cost of Goods Sold?', 'True','False','','','True')
+#4('What is the ratio of Current Assets divided by Current Liabilities?','Equity Ratio','Current Ratio','Asset Ratio','Turnover Ratio','Current Ratio')
+#5('True or False, Inventory Turnover measures how fast merchandise is sold.','True','False','','', 'True')
 
 
 #Table 2 labled Databaase
