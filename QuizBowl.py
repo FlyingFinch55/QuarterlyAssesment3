@@ -1,9 +1,12 @@
 from tkinter import *
 from tkinter import ttk
-
+import sqlite3
 
 root = Tk()
 root.title("Quiz Bowl")
+
+conn= sqlite3.connect('QuarterA3.db')
+curse = conn.cursor()
 
 
 class TopicSelection:
@@ -20,9 +23,35 @@ class TopicSelection:
         self.submitButt = ttk.Button(master, text="Submit")
         self.submitButt.config(command= self.RunQuiz())
         self.submitButt.grid()
-    def RunQuiz(self,Table):
-        for question in Table:
-            quizbowler = QandA(question, answeroptions,correctAnswer)
+    def RunQuiz(self):
+        Table = self.topicPick.get()
+        if Table == "Accounting basics":
+           curse.execute("SELECT * FROM ACCT")
+           print(curse.fetchall())
+           print()
+        #for question in Table:
+            #quizbowler = QandA(question, answeroptions,correctAnswer)
+
+        if Table == "Database":
+            curse.execute("SELECT * FROM Database")
+            print(curse.fetchall())
+            print()
+
+        if Table == "Assebly code":
+            curse.execute("SELECT * FROM AssablyProg")
+            print(curse.fetchall())
+            print()
+
+        if Table == "Python code":
+            curse.execute("SELECT * FROM PythonProg")
+            print(curse.fetchall())
+            print()
+
+        if Table == "Computer Hardwear":
+            curse.execute("SELECT * FROM ComputerHardWear")
+            print(curse.fetchall())
+            print()
+
 
 
 
