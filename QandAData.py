@@ -10,6 +10,7 @@ curse = conn.cursor()
 #curse.execute('''INSERT INTO tableName VALUES
 #              ('Question?','AnswerOption 1', 'AnswerOption 2', 'AnswerOption 3', 'AnswerOption 4', 'CorrectAnswer)
 #              ''')
+#conn.commit()
 #Meger options 1-4 into a list 
 
 #Table 1 labled ACCT
@@ -17,10 +18,12 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
-curse.execute('''INSERT INTO ACCT VALUES
-              ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
-              ''')
+#curse.execute('''INSERT INTO ACCT VALUES
+#              ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
+#              ''')
 conn.commit()
+
+#1 ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
 
 
 
