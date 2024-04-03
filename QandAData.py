@@ -19,7 +19,7 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
 
 
 curse.execute('''INSERT INTO ACCT VALUES
-              ('True or False, Inventory Turnover measures how fast merchandise is sold.','True','False','','', 'True')
+              ('Sales are $18,000 with a discount of $500 and returns of $1,500. What is the Net Sales?', '$1,500','$500','$18,000','$16,000','$16,000')
               ''')
 conn.commit()
 
@@ -28,6 +28,7 @@ conn.commit()
 #3 ('Does Gross Profit = Revenue - Cost of Goods Sold?', 'True','False','','','True')
 #4('What is the ratio of Current Assets divided by Current Liabilities?','Equity Ratio','Current Ratio','Asset Ratio','Turnover Ratio','Current Ratio')
 #5('True or False, Inventory Turnover measures how fast merchandise is sold.','True','False','','', 'True')
+#6('Sales are $18,000 with a discount of $500 and returns of $1,500. What is the Net Sales?', '$1,500','$500','$18,000','$16,000','$16,000')
 
 
 #Table 2 labled Databaase
