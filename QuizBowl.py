@@ -9,10 +9,14 @@ conn= sqlite3.connect('QuarterA3.db')
 curse = conn.cursor()
 
 
-class TopicSelection:
+class TopicSelection():
+    #def __init__(self, *args):
+        #super().__init__(*args)
+        
+        #self.MainScreen(root, ListOptions)
+
     def __init__(self,master, topicOptions):
-        self.labIntro = ttk.Label(master, text="Welcome to the Quiz bowl")
-        self.labIntro.grid()
+
         self.labPick = ttk.Label(master, text="Pick a topic for your quiz")
         self.labPick.grid()
 
@@ -23,8 +27,11 @@ class TopicSelection:
         self.submitButt = ttk.Button(master, text="Submit")
         self.submitButt.config(command= self.RunQuiz())
         self.submitButt.grid()
+    
     def RunQuiz(self):
+        print("Submit button work")
         Table = self.topicPick.get()
+        print(Table)
         if Table == "Accounting basics":
            curse.execute("SELECT * FROM ACCT")
            print(curse.fetchall())

@@ -70,19 +70,26 @@ curse.execute('''CREATE TABLE IF NOT EXISTS PythonProg
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
-curse.execute('''INSERT INTO PythonProg VALUES
-              ('What is the variable type for booleans?','int','str','float','bool','bool')
-              ''')
-conn.commit()
-
 #1('What is the extension for a Python file?','.py','.db','.c','.exe','.py')
 #2('What is the extension for a Database file?','.py','.db','.c','.exe','.db')
 #3('What is the variable type for strings?','int','str','float','bool','str')
 #4('What is the variable type for integers?','int','str','float','bool','int')
 #5('What is the variable type for real numbers?','int','str','float','bool','float')
 #6('What is the variable type for booleans?','int','str','float','bool','bool')
+#7('What type of variable does print("55") print?','int','str','float','bool','str')
+#8('What type of variable does print(55) print?','int','str','float','bool','int')
+#9('What symbol is used to comment a line?','*','//','comment','#','#')
+#10('What does print("5"+"5") print?','55','10','25','55555','55')
 
 
 #Table 5 labled ComputerHardWear
 curse.execute('''CREATE TABLE IF NOT EXISTS ComputerHardWear
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
+
+curse.execute('''INSERT INTO ComputerHardWear VALUES
+              
+              ''')
+conn.commit()
+
+#1
+
