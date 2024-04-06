@@ -13,6 +13,7 @@ curse = conn.cursor()
 #conn.commit()
 #Meger options 1-4 into a list 
 
+
 #Table 1 labled ACCT
 curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
@@ -30,11 +31,10 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
 #10('What does FIFO mean?', 'First in First out','First in Financial Options','Fees in Federal operating contract','Flour in Fire Oven','First in First out')
 
 
+
 #Table 2 labled Databaase
 curse.execute('''CREATE TABLE IF NOT EXISTS Database
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
-
-
 
 
 #1('Name the key that is the Primary Key of another entity.','Foreign Key','Compound Key','Piano Key','Skeleton Key', 'Foreign Key')
@@ -53,11 +53,16 @@ curse.execute('''CREATE TABLE IF NOT EXISTS AssablyProg
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 curse.execute('''INSERT INTO AssablyProg VALUES
-              (
+              ('What size is DCB?','word','bite','byte','half-word','byte')
               ''')
 conn.commit()
 
-#1
+#1('What does LDR stand for?','Loud','Load','Live','Little','Load')
+#2('What does STR stand for?','Standard','Stall','Store','Still','Store')
+#3('What does MOV stand for?','Commove','Amove','Movies','Move','Move')
+#4('What size is DCD?','word','bite','byte','half-word','word')
+#5('What size is DCW?','word','bite','byte','half-word','half-word')
+#6('What size is DCB?','word','bite','byte','half-word','byte')
 
 
 #Table 4 labeled PythonProg
