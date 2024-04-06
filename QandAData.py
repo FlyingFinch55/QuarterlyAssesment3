@@ -52,10 +52,6 @@ curse.execute('''CREATE TABLE IF NOT EXISTS Database
 curse.execute('''CREATE TABLE IF NOT EXISTS AssablyProg
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
-curse.execute('''INSERT INTO AssablyProg VALUES
-              ('What size is DCB?','word','bite','byte','half-word','byte')
-              ''')
-conn.commit()
 
 #1('What does LDR stand for?','Loud','Load','Live','Little','Load')
 #2('What does STR stand for?','Standard','Stall','Store','Still','Store')
@@ -63,6 +59,10 @@ conn.commit()
 #4('What size is DCD?','word','bite','byte','half-word','word')
 #5('What size is DCW?','word','bite','byte','half-word','half-word')
 #6('What size is DCB?','word','bite','byte','half-word','byte')
+#7('True or False ENDP ends the program.','True','False','','','True')
+#8('True or False, Array1 DCD 0, 0, 0, 0 makes an array of words all values 0.','True','False','','','True')
+#9('What does 0011 + 0010 equal?','0000','1111','1010','0101','0101')
+#10('What does 0100 + 0011 equal?','0000','1111','0111','1000','0111')
 
 
 #Table 4 labeled PythonProg
@@ -70,8 +70,12 @@ curse.execute('''CREATE TABLE IF NOT EXISTS PythonProg
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
+curse.execute('''INSERT INTO PythonProg VALUES
+              
+              ''')
+conn.commit()
 
-
+#1
 
 
 #Table 5 labled ComputerHardWear
