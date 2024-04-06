@@ -87,7 +87,7 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ComputerHardWear
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 curse.execute('''INSERT INTO ComputerHardWear VALUES
-              
+              ('What does OS stand for?','Operating system','Oh Sh**','Operating segment','Off-Cycle system','Operating system')
               ''')
 conn.commit()
 
