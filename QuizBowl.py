@@ -90,7 +90,9 @@ class QandA:
             self.feedLable.config(text="Incorrect", foreground="red")
         
 
+ListTester = ["Yes","No","Maybe","Try again later"]
 ListOptions = ["Python code", "Accounting basics", "Assebly code", "Computer Hardwear", "Database"]
 startTopic = TopicSelection(root,ListOptions)
+testQandA = QandA(root,"Is this working?",ListTester,"Yes")
 
 root.mainloop()
