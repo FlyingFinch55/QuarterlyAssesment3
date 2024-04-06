@@ -36,11 +36,15 @@ curse.execute('''CREATE TABLE IF NOT EXISTS Database
 
 
 curse.execute('''INSERT INTO Database VALUES
-              ('Name the key that is the Primary Key of another entity.','Foreign Key','Compound Key','Piano Key','Skeleton Key', 'Foreign Key')
+              ('Relationships are made using what?','Complemt Key','Foreign Key','Emotions','Two entitys','Foreign Key')
               ''')
 conn.commit()
 
-#1
+#1('Name the key that is the Primary Key of another entity.','Foreign Key','Compound Key','Piano Key','Skeleton Key', 'Foreign Key')
+#2('Name the key that is made of more than one attribute.', 'Compound Key','Foreign Key','Pinao Key','Skeleton Key','Compound Key')
+#3('True or False, the Primary Key is not a unique attribute.','True','False','','','False' )
+#4('True or False, there are 3 main types of anomalies.','True','False','','','True')
+#5('Relationships are made using what?','Complemt Key','Foreign Key','Emotions','Two entitys','Foreign Key')
 
 
 #Table 3 labled Assably Prog
