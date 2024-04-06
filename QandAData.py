@@ -18,17 +18,16 @@ curse.execute('''CREATE TABLE IF NOT EXISTS ACCT
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
-curse.execute('''INSERT INTO ACCT VALUES
-              ('Sales are $18,000 with a discount of $500 and returns of $1,500. What is the Net Sales?', '$1,500','$500','$18,000','$16,000','$16,000')
-              ''')
-conn.commit()
-
 #1 ('What does Liabilty + Equity=', 'Assets','Accounts Recivale', 'Owners Equity', 'Assistant', 'Assets')
 #2 ('What is the Net Income equation?', 'Owners Equity + Net Sales','Revenue - Expenses','Revenue + Expenses', 'Liabilty + Equity','Revenue - Expense')
 #3 ('Does Gross Profit = Revenue - Cost of Goods Sold?', 'True','False','','','True')
 #4('What is the ratio of Current Assets divided by Current Liabilities?','Equity Ratio','Current Ratio','Asset Ratio','Turnover Ratio','Current Ratio')
 #5('True or False, Inventory Turnover measures how fast merchandise is sold.','True','False','','', 'True')
 #6('Sales are $18,000 with a discount of $500 and returns of $1,500. What is the Net Sales?', '$1,500','$500','$18,000','$16,000','$16,000')
+#7('What does COGS stand for?', 'Collection of Good Socks,','Cost of Golden Shoes','Caller of Goods Sold','Cost of Goods Sold','Cost of Goods Sold')
+#8('Is cash an Asset or a Liability?', 'Asset','Liability','','','Asset')
+#9('What does LIFO mean?', 'Last in First out','Lost in Financial Options','Lender in Federal operating contract','Letters in Fire Oven','Last in First out')
+#10('What does FIFO mean?', 'First in First out','First in Financial Options','Fees in Federal operating contract','Flour in Fire Oven','First in First out')
 
 
 #Table 2 labled Databaase
@@ -36,7 +35,12 @@ curse.execute('''CREATE TABLE IF NOT EXISTS Database
               (question TEXT, answerOption1 TEXT, answerOption2 TEXT, answerOption3 TEXT, answerOption4 TEXT, correctAnswer TEXT)''')
 
 
+curse.execute('''INSERT INTO Database VALUES
+              ('Name the key that is the Primary Key of another entity.','Foreign Key','Compound Key','Piano Key','Skeleton Key', 'Foreign Key')
+              ''')
+conn.commit()
 
+#1
 
 
 #Table 3 labled Assably Prog
