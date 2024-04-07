@@ -34,8 +34,8 @@ class TopicSelection:
 
 
     def topicData(self):
-        self.root.destroy()
-        window_two = tk.Tk()
+        self.root.withdraw()
+        self.q_and_a_window = tk.Toplevel(self.root)
         
         if self.topicPick.get() == ListOptions[0]:
             self.lableTest.config(text= "Python choson")
@@ -48,7 +48,7 @@ class TopicSelection:
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
             for question, correct_answer,answer_options in questions_and_options_list:
-                ques = QandA(window_two, question,answer_options,correct_answer)
+                QandA(self.q_and_a_window, question,answer_options,correct_answer)
             
 
         if self.topicPick.get() == ListOptions[4]:
@@ -62,7 +62,7 @@ class TopicSelection:
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
             for question, correct_answer,answer_options in questions_and_options_list:
-                ques = QandA(window_two, question,answer_options,correct_answer)
+                QandA(self.q_and_a_window, question,answer_options,correct_answer)
            
 
         if self.topicPick.get() == ListOptions[1]:
@@ -76,7 +76,7 @@ class TopicSelection:
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
             for question, correct_answer,answer_options in questions_and_options_list:
-                ques = QandA(window_two, question,answer_options,correct_answer)
+                QandA(self.q_and_a_window, question,answer_options,correct_answer)
             
 
         if self.topicPick.get() == ListOptions[2]:
@@ -90,7 +90,7 @@ class TopicSelection:
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
             for question, correct_answer,answer_options in questions_and_options_list:
-                ques = QandA(window_two, question,answer_options,correct_answer)
+                QandA(self.q_and_a_window, question,answer_options,correct_answer)
 
         if self.topicPick.get() == ListOptions[3]:
             self.lableTest.config(text= "Hardware chosen")
@@ -103,7 +103,7 @@ class TopicSelection:
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
             for question, correct_answer,answer_options in questions_and_options_list:
-                ques = QandA(window_two, question,answer_options,correct_answer)
+                QandA(self.q_and_a_window, question,answer_options,correct_answer)
         
 
 
