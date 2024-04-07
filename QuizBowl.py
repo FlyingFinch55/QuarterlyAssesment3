@@ -9,7 +9,12 @@ conn= sqlite3.connect('QuarterA3.db')
 curse = conn.cursor()
 
 
-class TopicSelection():
+class TopicSelection:
+    #def __init__(self, *args):
+        #super().__init__(*args)
+        
+        #self.MainScreen(root, ListOptions)
+
     def __init__(self,master, topicOptions):
 
         self.labPick = ttk.Label(master, text="Pick a topic for your quiz")
@@ -18,14 +23,15 @@ class TopicSelection():
         self.topicPick = ttk.Combobox(master)
         self.topicPick.config(value= topicOptions)
         self.topicPick.grid()
-        self.quizTopic =  self.topicPick.get()
+        #self.quizTopic =  self.topicPick.get()
 
         self.submitButt = ttk.Button(master, text="Submit")
-        self.submitButt.config(command= self.TopicChosen())
+        self.submitButt.config(command= self.topicData)
         self.submitButt.grid()
-    
-    def TopicChosen(self):
-        if self.topicPick.get() == ListOptions[0]: #Python
+
+
+    def topicData(self):
+        if self.topicPick.get() == ListOptions[0]:
             curse.execute("SELECT * FROM PythonProg")
             rows = curse.fetchall()
             questions_and_options_list = []
@@ -34,11 +40,11 @@ class TopicSelection():
                 correct_answer = row[5]
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
-            for question in questions_and_options_list:
-                ques = QandA(root, question[0],answer_options,correct_answer)
+            for question, correct_answer,answer_options in questions_and_options_list:
+                ques = QandA(root, question,answer_options,correct_answer)
 
 
-        if self.topicPick.get() == ListOptions[4]: #Database
+        if self.topicPick.get() == ListOptions[4]:
             curse.execute("SELECT * FROM Database")
             rows = curse.fetchall()
             questions_and_options_list = []
@@ -47,10 +53,11 @@ class TopicSelection():
                 correct_answer = row[5]
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
-            for question in questions_and_options_list:
-                ques = QandA(root, question[0],answer_options,correct_answer)
+            for question, correct_answer,answer_options in questions_and_options_list:
+                ques = QandA(root, question,answer_options,correct_answer)
+           
 
-        if self.topicPick.get() == ListOptions[1]: #ACCT
+        if self.topicPick.get() == ListOptions[1]:
             curse.execute("SELECT * FROM ACCT")
             rows = curse.fetchall()
             questions_and_options_list = []
@@ -59,11 +66,11 @@ class TopicSelection():
                 correct_answer = row[5]
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
-            for question in questions_and_options_list:
-                ques = QandA(root, question[0],answer_options,correct_answer)
+            for question, correct_answer,answer_options in questions_and_options_list:
+                ques = QandA(root, question,answer_options,correct_answer)
+            
 
-
-        if self.topicPick.get() == ListOptions[2]: #Assably
+        if self.topicPick.get() == ListOptions[2]:
             curse.execute("SELECT * FROM AssablyProg")
             rows = curse.fetchall()
             questions_and_options_list = []
@@ -72,21 +79,20 @@ class TopicSelection():
                 correct_answer = row[5]
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
-            for question in questions_and_options_list:
-                ques = QandA(root, question[0],answer_options,correct_answer)
+            for question, correct_answer,answer_options in questions_and_options_list:
+                ques = QandA(root, question,answer_options,correct_answer)
 
-        if self.topicPick.get() == ListOptions[3]: #ComputerHardware
-           curse.execute("SELECT * FROM ComputerHardWear")
-           rows = curse.fetchall()
-           questions_and_options_list = []
-           for row in rows:
+        if self.topicPick.get() == ListOptions[3]:
+            curse.execute("SELECT * FROM ComputerHardWear")
+            rows = curse.fetchall()
+            questions_and_options_list = []
+            for row in rows:
                 question = row[0]
                 correct_answer = row[5]
                 answer_options = (row[1], row[2], row[3], row[4])
                 questions_and_options_list.append((question, correct_answer, answer_options))
-           for question in questions_and_options_list:
-                ques = QandA(root, question[0],answer_options,correct_answer)         
-
+            for question, correct_answer,answer_options in questions_and_options_list:
+                ques = QandA(root, question,answer_options,correct_answer)
 
 
 class QandA:
@@ -118,8 +124,10 @@ class QandA:
         
 
 
+
 ListOptions = ["Python code", "Accounting basics", "Assebly code", "Computer Hardwear", "Database"]
-startTopic = TopicSelection(root,ListOptions)
+TestStart = TopicSelection(root,ListOptions)
+
 
 
 root.mainloop()
