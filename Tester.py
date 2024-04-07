@@ -115,21 +115,21 @@ class QandA:
         self.correctAnswer=correctAns
 
         self.frameQA = ttk.Frame(self.root, relief='raised',padding=(5,5))
-        self.frameQA.grid()
+        self.frameQA.pack()
         
         self.lab1 = ttk.Label(self.frameQA, text=strQuestion)
-        self.lab1.grid()
+        self.lab1.pack()
         
         self.answerOpt = ttk.Combobox(self.frameQA)
-        self.answerOpt.grid()
+        self.answerOpt.pack()
         self.answerOpt.config(values=listAnswers)
 
         
         self.testButt = ttk.Button(self.frameQA, text="Submit",command=self.checkAnswe)
-        self.testButt.grid()
+        self.testButt.pack()
 
         self.feedLable = ttk.Label(self.frameQA)
-        self.feedLable.grid()
+        self.feedLable.pack()
 
     def checkAnswe(self):
         if self.answerOpt.get() == self.correctAnswer:

@@ -47,6 +47,7 @@ class TopicSelection:
             for question, correct_answer,answer_options in questions_and_options_list:
                 QandA(self.q_and_a_window, question,answer_options,correct_answer)
             
+            
 
         if self.topicPick.get() == ListOptions[4]:
             curse.execute("SELECT * FROM Database")
