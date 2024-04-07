@@ -24,7 +24,7 @@ class TopicSelection:
         self.topicPick.config(value= topicOptions)
         self.topicPick.grid()
 
-        self.submitButt = ttk.Button(self.root, text="Submit")
+        self.submitButt = ttk.Button(self.root, text="Start Quiz")
         self.submitButt.config(command= self.topicData)
         self.submitButt.grid()
 
